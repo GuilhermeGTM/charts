@@ -2,7 +2,7 @@
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/GuilhermeGTM/ProjetoFilmes/blob/main/LICENSE) 
 
 # Sobre o projeto
-Foi criado um grafico utilizando chartjs, com randint gerando numeros aleatórios para demostrar o uso
+Foi criado um gráfico utilizando chartjs, com randint gerando numeros aleatórios para demostrar o uso
   
 
 ## Layout web
