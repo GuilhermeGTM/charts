@@ -1,0 +1,1 @@
+django-chartjs - integração da biblioteca chartjs, da para usar o javascript ou usar essa biblioteca integrada

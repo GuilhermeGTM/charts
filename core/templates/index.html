@@ -1,0 +1,37 @@
+{% load static %}
+{% load bootstrap4 %}
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    {% bootstrap_css %}
+
+    <title>GTM Chats</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="text-primary">GTM Charts - Limpeza da Casa</h1>
+    </div>
+
+    <div class="container">
+        <canvas id="grafico" width="125" height="50"></canvas>
+    </div>
+
+  {% bootstrap_javascript jquery='full' %}
+  <script type="text/javascript" src="{% static 'js/Chart.min.js' %}"></script>
+
+  <script type="text/javascript">
+      $.get('{% url "dados"  %}', function(data){
+        var ctx = $("#grafico").get(0).getContext("2d");
+        new Chart(ctx, {
+            type: 'line', data: data
+        });
+      });
+  </script>
+  </body>
+</html>
